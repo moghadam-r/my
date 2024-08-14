@@ -1,0 +1,62 @@
+@import url("../style/fonts.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+} */
+
+
+
+* {
+  font-family: iranSans;
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* .swiper-pagination {
+  background: white;
+  height: 24px;
+  width: 100%;
+  z-index: 10;
+
+
+} */
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #2AD4FF;
+  font-size: 8px;
+  opacity: 0.3
+    /* height: 12px; */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #1dcdf9;
+  opacity: 1
+    /* height: 12px; */
+}
+
+.pagination-bullet {
+  width: 1.5rem;
+  margin: 0 0.1rem;
+}
+
+/* background-image: url('../ima/1200px-Location_dot_red.svg.png') !important; */

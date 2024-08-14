@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "shabnam";
+    src: url("../../../../../public/fonts/Shabnam-FD.woff2") format("woff2");
+  }
+  .form {
+      display: grid;
+      background-color: white;
+      padding: 10px 25px;
+      width: 60%;
+      font-family: shabnam;
+      margin: 7rem auto 2rem;
+      border-radius: 4px;
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+      text-align: center;
+      color: black;
+      
+  }
+  .formDashboard {
+    
+    display: grid;
+    background-color: white;
+    padding: 10px 25px;
+    width: 40%;
+    font-family: shabnam;
+    margin: 7rem auto 2rem;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    text-align: center;
+    color: black;
+    
+  }
+  
+  
+    .texts {
+      font-size:xx-large;
+      font-weight:bold;
+      font-family: shabnam;
+      margin-top: 40px;
+      text-align: right;
+      direction: rtl;
+      color: #3c2415;
+    }
+    .lbCodeMeli {
+      font-size:medium;
+      font-weight:bold;
+      font-family: shabnam;
+      margin-top: 40px;
+      margin-right: 25px;
+      text-align: left;
+      direction: rtl;
+      color: #3c2415;
+    }
+  
+    .lbrahgiry {
+      font-size:medium;
+      font-weight:bold;
+      font-family: shabnam;
+      margin-top: 40px;
+   
+      text-align: left;
+      direction: rtl;
+      color: #3c2415;
+    }
+    .lbpasokh {
+      font-size:medium;
+      font-weight:bold;
+      font-family: shabnam;
+      margin-right: 25px;
+      text-align: left;
+      direction: rtl;
+      color: #3c2415;
+      margin-top: 20px;
+    }
+    
+   
+  .input {
+      font-family: shabnam;
+      font-size: 20px;
+      padding: 13px;
+      background-color: white;
+      color: black;
+      border-radius: 3px;
+      border: 1px solid black;
+      direction: rtl;
+      margin-top: 20px;
+      margin-right: 10px;
+     
+  }
+  
+ 
+  
+  
+  .btnPasokh {
+   background-color: #04AA6D;
+    color: white;
+    padding: .8rem;
+    cursor: pointer;
+    color: white !important;
+    font-family: shabnam;
+     width: 100%;
+    margin-top: 40px;
+    font-size: 25px;
+  }
+  
+   
+  
+  .btn {
+      padding: .8rem;
+      cursor: pointer;
+      color: white !important;
+      font-family: shabnam;
+      background-color: rgb(52, 24, 14);
+      margin-top: 40px;
+      font-size: 25px;
+  }
+  
+  
+  
+  .form span {
+      text-align: right;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 20px;
+  }
+  
+  .lbarea{
+    display: flex;
+    align-items: center;
+  
+  }
+
+  .inputArea {
+    font-family: shabnam;
+    font-size: 20px;
+    padding: 13px;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    border: 1px solid black;
+    direction: rtl;
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 100%;
+   
+}
+  
+  #myInput:focus {outline: 3px solid #ddd;}
+  
+  /* The container <div> - needed to position the dropdown content */
+  
+  
+  /* Links inside the dropdown */
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
