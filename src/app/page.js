@@ -16,6 +16,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SwiperMainPage from "@/components/module/SwiperMainPage";
+import Login from "./components/templates/login/login";
 
 export default function Home() {
   return (
@@ -48,6 +49,7 @@ export default function Home() {
           <p className="font-bold mt-8">اداره کل آموزش و پرورش خراسان رضوی</p>
           <p className="font-sm ">پیشخوان مجازی</p>
         </div>
+        <Login />
         <Link
           href={"/"}
           className="flex bg-blue-100 rounded-lg h-12 mt-4 items-center justify-center text-blue-900 cursor-pointer w-full"
