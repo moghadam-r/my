@@ -24,7 +24,7 @@ function dashboard() {
                   // onClick={updateUser}
         
                   onClick={() => {
-                    //router.replace("/component/templates/request");
+                    router.replace("/p-user/dashboard/req");
                     // <Req />;
                   }}
                 >
@@ -40,7 +40,7 @@ function dashboard() {
                   // onClick={updateUser}
         
                   onClick={() => {
-                    //router.replace("/component/templates/request");
+                    router.replace("//p-user/dashboard/res");
                     // <Req />;
                   }}
                 >

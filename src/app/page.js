@@ -46,8 +46,8 @@ export default function Home() {
       <section className="col-span-5 lg:col-span-2 bg-blue-800 lg:h-full h-auto p-4 rounded-lg flex items-center flex-col justify-center w-full bg-gradient-to-r from-blue-800 to-indigo-900 ">
         <div className="flex flex-col items-center justify-center p-8 bg-white rounded-lg gap-2 w-full">
           <img src="./images/itLogo.png" height={64} width={64} className="" />
-          <p className="font-bold mt-8">اداره کل آموزش و پرورش خراسان رضوی</p>
-          <p className="font-sm ">پیشخوان مجازی</p>
+          <p className="font-bold mt-8">میز خدمت داره کل آموزش و پرورش خراسان رضوی</p>
+          
         </div>
         <Login />
         <Link

@@ -2108,6 +2108,9 @@ video {
 .text-\[16px\] {
   font-size: 16px;
 }
+.text-\[24px\] {
+  font-size: 24px;
+}
 .text-\[36px\] {
   font-size: 36px;
 }
@@ -2134,9 +2137,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-\[24px\] {
-  font-size: 24px;
 }
 .font-bold {
   font-weight: 700;

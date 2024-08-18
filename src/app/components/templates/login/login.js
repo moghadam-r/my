@@ -6,7 +6,7 @@ import swal from "sweetalert";
 
 import { valiadtePhone, valiadteMeliCode } from "@/utils/auth";
 
-import ReactInputVerificationCode from "react-input-verification-code";
+
 import { Button, Input } from "@nextui-org/react";
 const Login = () => {
   const router = useRouter();
@@ -49,7 +49,9 @@ const Login = () => {
       });
       return Response.json({ message: "Data is not valid!!" }, { status: 422 });
     } else {
-      const res = await fetch("/api/auth/sms/send", {
+      console.log("!erorr")
+      
+      const res = await fetch("api/auth/sms/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
