@@ -6,6 +6,7 @@
   font-family: "shabnam";
   src: url("../../public/fonts/Shabnam-FD.woff2") format("woff2");
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -60,7 +61,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "shabnam";
- /* background: url(./../../public/images/bg.jpeg);*/
+  /* background: url(./../../public/images/bg.jpeg);*/
   background-size: cover;
 }
 
@@ -77,15 +78,16 @@ body {
   left: 50%;
   /*transform: translate(-50%, -50%);*/
   width: 400px;
-  right:70%;
+  right: 70%;
   padding: 50px;
   background: rgba(3, 32, 70, 0.8);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   direction: ltr;
-  
+
 }
+
 .box h1 {
   margin: 0 0 30px;
   padding: 0;
@@ -93,10 +95,12 @@ body {
   text-align: center;
   font-size: 24px;
 }
+
 .box .inputBox {
   position: relative;
-  
+
 }
+
 .box .inputBox input {
   width: 100%;
   padding: 10px;
@@ -108,9 +112,10 @@ body {
   border-bottom: 1px solid #fff;
   outline: none;
   background: transparent;
-  
-  
+
+
 }
+
 .box .inputBox label {
   position: absolute;
   top: 0;
@@ -124,17 +129,20 @@ body {
   text-align: right;
   margin-left: 73%;
 }
-.box .inputBox input:focus ~ label,
-.box .inputBox input:valid ~ label {
+
+.box .inputBox input:focus~label,
+.box .inputBox input:valid~label {
   top: -18px;
   left: 0;
   color: #03a9f4;
   font-size: 12px;
-  
+
 }
+
 .register {
   color: #03a9f4;
 }
+
 .box input[type="submit"] {
   background: transparent;
   border: none;
@@ -144,7 +152,7 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
- 
+
 }
 
 a {
@@ -164,27 +172,29 @@ button a {
   display: block;
 }
 
- 
-   /*
+
+/*
    
    */
-   
- 
-  
+
+.main-wrapper {
+  width: 100%;
+}
+
 /* Other */
 
 .custom-styles {
   --ReactInputVerificationCode-itemWidth: 2.5rem;
   --ReactInputVerificationCode-itemHeight: 3.5rem;
   direction: ltr;
-  
+
 }
 
 .custom-styles .ReactInputVerificationCode__item {
   position: relative;
   color: hsl(0, 10%, 94%);
   font-weight: 500;
-  
+
 
 }
 

@@ -1,7 +1,5 @@
 "use client";
 
-//import styles from "@/src/styles/register.module.css";
-// import styles from "./dashboard.module.css";
 import { useRouter } from "next/navigation";
 import { Button, Input } from "@nextui-org/react";
 
@@ -20,7 +18,7 @@ function dashboard() {
                   className="bg-blue-500 text-white w-full py-2 rounded-lg mt-8"
                   //onClick={sendCode}
                   // isLoading={true}
-                  type="submit"
+                 // type="submit"
                   // onClick={updateUser}
         
                   onClick={() => {
@@ -36,11 +34,11 @@ function dashboard() {
                   className="bg-blue-500 text-white w-full py-2 rounded-lg mt-8"
                   //onClick={sendCode}
                   // isLoading={true}
-                  type="submit"
+                //  type="submit"
                   // onClick={updateUser}
         
                   onClick={() => {
-                    router.replace("//p-user/dashboard/res");
+                    router.replace("/p-user/dashboard/res");
                     // <Req />;
                   }}
                 >

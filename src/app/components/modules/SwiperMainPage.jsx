@@ -50,7 +50,7 @@ function SwiperMainPage({ data }) {
                         // pagination={{ type: "bullets", clickable: true }}
                         autoplay={true}
                         loop={true}
-                        spaceBetween={10}
+                        spaceBetween={20}
                         // slidesPerView={2}
                         modules={[Autoplay]}
                         className="w-full overscroll-x-none rounded-lg "

@@ -1,7 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
+  "/p-user/dashboard/res/page": "app/p-user/dashboard/res/page.js",
   "/page": "app/page.js",
-  "/p-user/dashboard/page": "app/p-user/dashboard/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/p-user/dashboard/req/page": "app/p-user/dashboard/req/page.js"
+  "/p-user/dashboard/page": "app/p-user/dashboard/page.js"
 }

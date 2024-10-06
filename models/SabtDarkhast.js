@@ -21,10 +21,7 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  edare: {
-    type: String,
-    //required: true,
-  },
+  
   darkhast: {
     type: String,
     
@@ -35,13 +32,29 @@ const schema = new mongoose.Schema({
   },
   rahgiry: {
     type: String,
-    //required: true,
+    required: true,
   },
   date: {
-    type: Date,
-    default: () => Date.now(),
-    immutable: false,
+    type: String,
+    required: true,
+    // type: Date,
+    // default: () => Date.now(),
+    // immutable: false,
   },
+ 
+  status:{
+    type: String,
+    default:"پاسخ داده نشده",
+  },
+  answerd:{
+    type: String,
+    default:"F",
+  },
+  dateSabt: {
+    type: String,
+    //default: () => Date.now(),
+   // immutable: false,
+  }
 });
 
 // codes.txt -> 99000

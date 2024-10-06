@@ -50,7 +50,7 @@ const Login = () => {
       return Response.json({ message: "Data is not valid!!" }, { status: 422 });
     } else {
       console.log("!erorr")
-      
+
       const res = await fetch("api/auth/sms/send", {
         method: "POST",
         headers: {
@@ -126,7 +126,7 @@ const Login = () => {
                 <Button
                   className="bg-blue-500 text-white w-full py-2 rounded-lg"
                   onClick={verifyCode}
-                  // isLoading={true}
+                // isLoading={true}
                 >
                   بررسی کد فعال سازی
                 </Button>
@@ -160,7 +160,7 @@ const Login = () => {
                 <Button
                   className="bg-blue-500 text-white w-full py-2 rounded-lg mt-8"
                   onClick={sendCode}
-                  // isLoading={true}
+                // isLoading={true}
                 >
                   ارسال کد فعال سازی
                 </Button>

@@ -1,5 +1,10 @@
 
 import { sign, verify } from "jsonwebtoken";
+import { hash } from "bcryptjs";
+const hashPassword = async (password) => {
+  const hashedPassword = await hash(password, 12);
+  return hashedPassword;
+};
 
 const generateAccessToken = (data) => {
   const token = sign({ ...data }, process.env.AccessTokenSecretKey, {
@@ -30,7 +35,7 @@ const generateRefreshToken = (data) => {
 
 
 const valiadteMeliCode = (meliCode) => {
-  var xv= meliCode;
+  var xv = meliCode;
   if (isNaN(xv)) {
     swal({
       title: "کد ملی نادرست است",
@@ -50,36 +55,38 @@ const valiadteMeliCode = (meliCode) => {
       buttons: "تلاش مجدد",
     });
   } else {
-      var yy = 0;
-      var yv = parseInt(yv);
-      for (let i = 0; i < xv.length; i++) {
-          yv = xv[i] * (xv.length - i);
-          yy += yv;
-      }
-      var x = yy % 11;
-      if (x === 0) {
-          //alert("your code is valid !");
-          return true;
-      } else {
-        swal({
-          title: "کد ملی نادرست است",
-          icon: "error",
-          buttons: "تلاش مجدد",
-        });
-          return false;
-      }
-      yy = 0;
+    var yy = 0;
+    var yv = parseInt(yv);
+    for (let i = 0; i < xv.length; i++) {
+      yv = xv[i] * (xv.length - i);
+      yy += yv;
+    }
+    var x = yy % 11;
+    if (x === 0) {
+      //alert("your code is valid !");
+      return true;
+    } else {
+      swal({
+        title: "کد ملی نادرست است",
+        icon: "error",
+        buttons: "تلاش مجدد",
+      });
+      return false;
+    }
+    yy = 0;
   }
 
 };
 
 
 export {
-  
+
   generateAccessToken,
   generateRefreshToken,
   verifyAccessToken,
   valiadteMeliCode,
-  valiadtePhone
-  
+  valiadtePhone,
+  hashPassword,
+
+
 };

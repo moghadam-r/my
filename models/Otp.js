@@ -30,6 +30,10 @@ const schema = new mongoose.Schema({
     default: () => Date.now(),
     immutable: false,
   },
+
+    refreshToken: {
+     type: String,
+    },
 });
 
 // codes.txt -> 99000

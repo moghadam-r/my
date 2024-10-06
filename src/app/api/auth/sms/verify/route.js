@@ -1,6 +1,5 @@
 import connectToDB from "@/configs/db";
 import OtpModel from "@/models/Otp";
-import { valiadtePhone,valiadteMeliCode } from "@/utils/auth"
 export async function POST(req) {
   connectToDB();
   const body = await req.json();

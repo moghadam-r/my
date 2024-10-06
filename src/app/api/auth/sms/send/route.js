@@ -1,46 +1,35 @@
 const request = require("request");
 import connectToDB from "@/configs/db";
 import OtpModel from "@/models/Otp";
-import { generateAccessToken, refreshToken } from "@/utils/auth";
-
-
-
-
+import { generateAccessToken, generateRefreshToken } from "@/utils/auth";
 
 export async function POST(req) {
   console.log("Post Api..........")
   try {
-    // if ((!meliCode.trim() )|| (!phone.trim())||
-    //    (isNaN(phone))||(phone.length !==11 )||
-    //  (isNaN(meliCode))||(phone.meliCode !==10 )){
-    //  return Response.json(
-    //    { message: "Data is not valid!!" },
-    //   { status: 422 });
 
-    // }else{
     let pKey = false;
     pKey = Date.now();
 
 
     connectToDB();
-    
+
     if (req.method !== "POST") {
       return false;
     }
-    
+
     const body = await req.json();
     const { phone, meliCode } = body;
 
     const now = new Date();
     const expTime = now.getTime() + 300_000; // 5 Mins
-    
+
     const code = Math.floor(Math.random() * 99999);
     let strpKey = pKey.toString() + phone.toString();
-    
+
     pKey = Number(strpKey);
     const accessToken = generateAccessToken({ pKey });
-    console.log("Post Api.11.........")
-    console.log("accesstoken ====>",accessToken)
+    const refreshToken = generateRefreshToken({ pKey });
+
 
     request.post(
       {
@@ -71,27 +60,31 @@ export async function POST(req) {
             code,
             expTime,
             meliCode,
+            refreshToken,
 
           });
-          console.log("!erorr")
-
-
-
+          
         } else {
-          console.log("erorr")
-
-
           return response.json({ message: "UnKnown Error !!" }, { status: 500 });
         }
       }
     );
-
+    const headers = new Headers();
+    headers.append("Set-Cookie", `token=${accessToken};path=/;httpOnly=true;`);
+    headers.append(
+      "Set-Cookie",
+      `refresh-token=${refreshToken};path=/;httpOnly=true;`
+    );
     return Response.json(
 
       { message: "Code sent successfully :))" },
       {
         status: 201,
-        headers: { "Set-Cookie": `token=${accessToken};path=/;httpOnly=true` },
+        headers,
+        // headers: {
+        //   "Set-Cookie": `token=${accessToken};path=/;httpOnly=true;`,
+          
+        // },
       }
     );
 

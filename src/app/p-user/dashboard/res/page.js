@@ -7,6 +7,7 @@ import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { Input,Button,Textarea } from "@nextui-org/react";
 //import {sabtModel} from "@/models/SabtDarkhast"; 
 
 function requset() {
@@ -18,7 +19,7 @@ function requset() {
  
   useEffect(() => {
     const getUser = async () => {
-      const res = await fetch("/api/user");
+      const res = await fetch("/api/user/getAll");
       const data = await res.json();
       if (data){
      
@@ -37,9 +38,6 @@ function requset() {
     getUser();
   }, []);
 
-
-  
-   
     const getPasokh = async () => {
       if (!rahgiry.trim()){
         swal({
@@ -77,24 +75,25 @@ function requset() {
 
 
   return (
-    <main>
-    <div className="w-full rounded-lg bg-white p-8 my-8 flex flex-col  items-center justify-center ">
+    <main className= "w-full h-full rounded-lg bg-white p-8 my-8 flex flex-col  items-center justify-center gap-4">
+   
       <h1 >
-        <span className={styles.texts}> میز خدمت آموزش و پرورش خراسان رضوی</span>
+        <span className="text-2xl"> میز خدمت آموزش و پرورش خراسان رضوی</span>
       </h1>
-      <div >
-        <section className={styles.texts}>
-        <div className="w-full flex ">
-                <Input
-                  type="text"
-                  placeholder="کد ملی"
-                  readOnly={true}
-                  value={meliCode}
-                  onValueChange={setMeliCode}
-                />
-        </div>
+      <div className=" grid grid-cols-3  bg-blue-500 bg-opacity-20  h-auto  p-4 rounded-lg ">
+        <div className="w-full text-right items-start justify-start pad p-2 col-span-2">
+          <Input
+           
+           value={meliCode}
+           readOnly={true}
+            placeholder="کد  ملی"
+          // onChange={(event) => setMeliCod(event.target.value)}
+           type="text"
+           
+         />
+         </div>
 
-        <div className="w-full flex ">
+        <div className="w-full text-right items-start justify-start p-2 col-span-2">
                 <Input
                   type="text"
                   placeholder="کد رهگیری"
@@ -102,44 +101,39 @@ function requset() {
                   value={rahgiry}
                   onValueChange={setRahgiry}
                 />
-        </div>
-        <div className="mt-8">
+         </div>
+        <div className="w-full col-span-3 text-right items-start justify-start p-2 col-span-2">
                 <Button
-                  className="bg-blue-500 text-white w-full py-2 rounded-lg mt-8"
+                  className="bg-blue-500 text-white w-full py-2 rounded-lg"
                   onClick={getPasokh}
                   type="submit"
                   // isLoading={true}
                 >
                    دریافت پاسخ 
                 </Button>
-              </div>
+          </div>
           
-        <div className="w-full flex ">
-                <Input
+        <div className="w-full col-span-2 text-right items-start justify-start p-2 col-span-3 ">
+                <Textarea
+                  readOnly={true}
                   type="text"
                   placeholder=" پاسخ"
-                
                   value={resItem}
                   onValueChange={setResItem}
                 />
         </div>  
-          
-                   
-        </section>
-
-        
-      </div>
-      <div className="mt-8">
+         
+        <div className="w-full col-span-2 text-right items-start justify-start p-2 col-span-3 ">
                 <Button
-                  className="bg-blue-500 text-white w-full py-2 rounded-lg mt-8"
-                  onClick={goToHomePage}
-                                 
+                  className="bg-blue-500 text-white w-full py-2 rounded-lg"
+                  onClick={goToHomePage}             
                 >
                     تایید 
                 </Button>
-              </div>
+        </div>
      
     </div>
+    
   </main>
    
   );

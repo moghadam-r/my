@@ -39,7 +39,7 @@ export default function Home() {
             با ورود به پیشخوان مجازی از خدمات زیر بهره مند شوید
           </p>
           <div className="w-full h-full">
-            <SwiperMainPage data={dataSlider} />
+            <SwiperMainPage data={dataSlider}  />
           </div>
         </div>
       </section>
@@ -50,28 +50,23 @@ export default function Home() {
           
         </div>
         <Login />
-        <Link
-          href={"/"}
-          className="flex bg-blue-100 rounded-lg h-12 mt-4 items-center justify-center text-blue-900 cursor-pointer w-full"
-        >
-          ورود از طریق شماره همراه
-        </Link>
-        <div className="grid grid-cols-3 mt-4 gap-2 w-full">
+       
+        <div className="grid grid-cols-3 mt-4 gap-2 w-full ">
           <Link
             href={"/"}
-            className="col-span-1 flex items-center justify-center h-12 bg-blue-50 rounded-lg"
+            className="text-base text-black mt-8col-span-1 flex items-center justify-center h-12 bg-blue-50 rounded-lg"
           >
-            پنل مدیریت
+             تماس با ما
           </Link>
           <Link
             href={"/"}
-            className="col-span-1 flex items-center justify-center h-12 bg-blue-50 rounded-lg"
+            className="text-base text-black col-span-1 flex items-center justify-center h-12 bg-blue-50 rounded-lg"
           >
             راهنمای سامانه
           </Link>
           <Link
             href={"/"}
-            className="col-span-1 flex items-center justify-center h-12 bg-blue-50 rounded-lg"
+            className="text-base text-black col-span-1 flex items-center justify-center h-12 bg-blue-50 rounded-lg"
           >
             سوالات متداول
           </Link>
